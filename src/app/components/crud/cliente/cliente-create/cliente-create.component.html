@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Novo Cliente</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="clienteForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome da Cliente</mat-label>
+      <input matInput formControlName="nome" [(ngModel)]="cliente.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>CPF</mat-label>
+      <input mask="000.000.000-00" matInput formControlName="cpf" [(ngModel)]="cliente.cpf" name="cpf" minlength="11" maxlength="15">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Telefone da Cliente</mat-label>
+      <input mask="(00) 00000-0000" matInput formControlName="telefone" [(ngModel)]="cliente.telefone" name="telefone">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Cidade da Cliente</mat-label>
+      <input matInput formControlName="cidade" [(ngModel)]="cliente.cidade" name="cidade">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="cadastrar()" color="primary">Adicionar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

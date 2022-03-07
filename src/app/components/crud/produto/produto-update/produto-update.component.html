@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Atualizar Produto</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="produtoFormUpdate">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome do Produto</mat-label>
+      <input matInput formControlName="nome" [(ngModel)]="produto.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Preço</mat-label>
+      <input matInput formControlName="preco" prefix="R$" mask="separator.2" thousandSeparator="," [(ngModel)]="produto.preco" name="preco">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Descrição</mat-label>
+      <input matInput formControlName="descricao" [(ngModel)]="produto.descricao" name="descricao">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="atualizarProduto()" color="primary">Atualizar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

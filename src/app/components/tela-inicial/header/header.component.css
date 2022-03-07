@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.logo{
+    width: 200px
+}
+.titulo{
+    font-family: Dancing Script;
+    font-size: 1.9em;
+    font-weight: bold;
+}

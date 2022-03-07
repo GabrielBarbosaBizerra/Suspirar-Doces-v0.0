@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Confirmar Entrega</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="confirmarForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome da Cliente</mat-label>
+      <input matInput formControlName="cliente" [(ngModel)]="pedido.cliente.nome" name="cliente" readonly>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="confimarEntrega()" color="primary">Confirmar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

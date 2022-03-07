@@ -1,0 +1,22 @@
+table{
+    width: 100%;
+}
+
+.editar{
+    margin-right: 10px;
+    color: #d9cd26;
+}
+
+.deletar{
+    color: #e35e6b;
+}
+
+.example-container {
+    height: 400px;
+    overflow: auto;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }

@@ -1,0 +1,24 @@
+a:hover {
+text-decoration: underline;
+color: #F00;
+}
+a:visited{
+    text-decoration: none;
+    color: #00F;
+}
+a{
+    color: #00F;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+}
+h2{
+    font-size: 1.5em;
+    text-indent: 1.5em;
+}
+p{
+    text-indent: 4em;
+    font-size: 1em;
+}

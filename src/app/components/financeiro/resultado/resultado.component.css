@@ -1,0 +1,19 @@
+.chart{
+    padding: 0;
+    display: inline;
+}
+
+table{
+    width: 100%;
+}
+
+.example-container {
+    width: 563px;
+    height: 400px;
+    overflow: auto;
+  }
+
+.tela{
+    display: flex;
+    justify-content: flex-start;
+}

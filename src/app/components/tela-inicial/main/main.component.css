@@ -1,0 +1,50 @@
+.titulo{
+    font-size: 2em;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+.subtitulo{
+    font-size: 1.5em;
+}
+
+.cardPedidos{
+    line-height: 1.2;
+    margin-top: 50px;
+    width: 210px;
+}
+
+.cardEstoque{
+    line-height: 1.2;
+    margin-top: 50px;
+    width: 210px;
+    margin-left: 50px;
+}
+
+.cardAvisos{
+    line-height: 1.2;
+    margin-top: 50px;
+    width: 210px;
+    margin-left: 50px;
+}
+
+.cardFinanceiro{
+    line-height: 1.2;
+    margin-top: 50px;
+    width: 210px;
+    height: 300px;
+    margin-left: 50px;
+}
+
+.cartoes{
+    display: flex; 
+    flex-direction: row
+}
+
+.listaAvisos{
+    list-style: none;
+}
+
+.listaEstoque{
+    list-style: none;
+}

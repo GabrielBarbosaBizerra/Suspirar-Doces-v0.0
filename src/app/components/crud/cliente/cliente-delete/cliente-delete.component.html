@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Deletar Cliente</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="clienteFormDelete">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome da Cliente</mat-label>
+      <input matInput formControlName="nome" [(ngModel)]="cliente.nome" name="nome" readonly>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>CPF</mat-label>
+      <input matInput formControlName="cpf" [(ngModel)]="cliente.cpf" name="cpf" readonly>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Telefone da Cliente</mat-label>
+      <input matInput formControlName="telefone" [(ngModel)]="cliente.telefone" name="telefone" readonly>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Cidade da Cliente</mat-label>
+      <input matInput formControlName="cidade" [(ngModel)]="cliente.cidade" name="cidade" readonly>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="removerCliente()" color="warn">Deletar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

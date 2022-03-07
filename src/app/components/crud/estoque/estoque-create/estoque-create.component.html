@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Novo Estoque</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="estoqueForm">
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" [(ngModel)]="estoque.nome" name="nome">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Quantidade</mat-label>
+      <input matInput formControlName="quantidade" [(ngModel)]="estoque.quantidade" name="quantidade">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Quantidade Mínima</mat-label>
+      <input matInput formControlName="quantidadeMinima" [(ngModel)]="estoque.quantidadeMinima" name="quantidadeMinima">
+    </mat-form-field>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="cadastrar()" color="primary">Adicionar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

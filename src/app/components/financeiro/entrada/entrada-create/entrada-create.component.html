@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Nova Entrada</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="entradaForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome da Entrada</mat-label>
+      <input matInput formControlName="nome" [(ngModel)]="entrada.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Valor</mat-label>
+      <input matInput formControlName="valor" prefix="R$" mask="separator.2" thousandSeparator="," [(ngModel)]="entrada.valor" name="valor">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Descrição</mat-label>
+      <input matInput formControlName="descricao" [(ngModel)]="entrada.descricao" name="descricao">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="cadastrar()" color="primary">Adicionar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

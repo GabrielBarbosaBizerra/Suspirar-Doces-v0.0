@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Deletar Pedido</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="pedidoFormDelete">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome da Cliente</mat-label>
+      <input matInput formControlName="nomeCliente" [(ngModel)]="pedido.cliente.nome" name="nomeCliente" readonly>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Valor do Pedido</mat-label>
+      <input matInput formControlName="valorPedido" prefix="R$" [(ngModel)]="pedido.valorTotal" name="valorPedido" readonly>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="removerPedido()" color="warn">Deletar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>

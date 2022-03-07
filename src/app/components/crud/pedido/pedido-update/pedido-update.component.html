@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Atualizar Pedido</h1>
+<div mat-dialog-content>
+  <form class="example-form" [formGroup]="pedidoForm">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Cliente</mat-label>
+      <mat-select type="number" [(ngModel)]="pedido.idCliente" [ngModelOptions]="{standalone: true}">
+        <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+          {{cliente.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Total</mat-label>
+      <input matInput formControlName="valorTotal" prefix="R$" [(ngModel)]="pedido.valorTotal" name="valorTotal">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Entrada</mat-label>
+      <input matInput formControlName="valorDeEntrada" [(ngModel)]="pedido.valorDeEntrada" name="valorDeEntrada">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>A Pagar</mat-label>
+      <input matInput formControlName="valorAPagar" prefix="R$" [(ngModel)]="pedido.valorAPagar" name="valorAPagar">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Data de Entrega" formControlName="dataDeEntrega"
+        [(ngModel)]="pedido.dataDeEntrega">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>
+    
+  </form>
+</div>
+<br>
+<span mat-dialog-actions class="flex-container">
+  <button mat-raised-button (click)="atualizarPedido()" color="primary">Atualizar</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</span>
